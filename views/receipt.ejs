@@ -1,0 +1,86 @@
+<!-- receipt.ejs
+    Assignment 4
+
+    Revision History
+        Francis Gerald H. Garlejo, 2022.08.11: Created, 2022.08.12: Revised
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Assignment 4</title>
+</head>
+
+<body>
+    <div class=receipt>
+        <h2>Official Receipt</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <td><input type="text" name="name" value="<%=pageData_name%>"></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><input type="text" name="address" value="<%=pageData_address%>"></td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td><input type="text" name="city" value="<%=pageData_city%>"></td>
+            </tr>
+            <tr>
+                <th>Province</th>
+                <td><input type="text" name="prov" value="<%=pageData_prov%>"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="text" name="email" value="<%=pageData_email%>"></td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td><input type="text" name="phone" value="<%=pageData_phone%>"></td>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <%=pageData_prod1Quantity%> Product of Nike Air Jordan 1 @ $150
+                </th>
+                <td><input type="text" name="prodOneFinalPrice" value="$ <%=pageData_prodOneFinalPrice%>"></td>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <%=pageData_prod2Quantity%> Product of Lebron 18 @ $110
+                </th>
+                <td><input type="text" name="prodTwoFinalPrice" value="$ <%=pageData_prodTwoFinalPrice%>"></td>
+                </td>
+            </tr>
+            <tr>
+                <th>Shipping Charge</th>
+                <td><input type="text" name="shippingCharge" value="$ <%=pageData_shippingCharge%>"></td>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub Total</th>
+                <td><input type="text" name="subTotal" value="$ <%=pageData_subTotal%>"></td>
+                </td>
+            </tr>
+            <tr>
+                <th>Sales Tax</th>
+                <td><input type="text" name="finalTax" value="$ <%=pageData_finalTax%>"></td>
+                </td>
+            </tr>
+            <tr>
+                <th>Final Total</th>
+                <td><input type="text" name="finalTotal" value="$ <%=pageData_finalTotal%>"></td>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

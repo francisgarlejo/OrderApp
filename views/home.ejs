@@ -1,0 +1,161 @@
+<!-- home.ejs
+    Order App
+
+    Revision History
+        Francis Gerald H. Garlejo, 2022.08.11: Created, 2022.08.12: Revised
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Assignment 4</title>
+</head>
+
+<body>
+    <form method="post" action="/getDetails">
+        <div class="first">
+            <a target="_blank" href="images/air-jordan-1.jpg">
+                <img src="images/air-jordan-1.jpg" alt="jordan" width="300">
+            </a>
+            <div class="desc1">
+                <label><b>Name: </b>Nike Air Jordan 1</label>
+                <br>
+                <label><b>Color: </b>University Blue</label>
+                <br>
+                <label><b>Size: </b>8 (US)</label>
+                <br>
+                <label><b>Price: </b>$150</label>
+                <br>
+            </div>
+            <div>
+                <div class="divProd1">
+                    <b>Quantity: </b><select name="prod1Quantity" id="prod1Quantity">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="second">
+            <a target="_blank" href="images/lebron-18.jpg">
+                <img src="images/lebron-18.jpg" alt="lebron" width="300">
+            </a>
+            <div class="desc2">
+                <label><b>Name: </b>Lebron 18</label>
+                <br>
+                <label><b>Color: </b>Multi-color</label>
+                <br>
+                <label><b>Size: </b>9 (US)</label>
+                <br>
+                <label><b>Price: </b>$110</label>
+                <br>
+            </div>
+            <div>
+                <div class="divProd2">
+                    <b>Quantity: </b><select name="prod2Quantity" id="prod2Quantity">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class=third>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td><input type="text" placeholder="Juan Dela Cruz" name="nameInput" value="<%=initName%>"></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td><input type="text" placeholder="183 Mayview North" name="addInput" value="<%=initAddress%>">
+                    </td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td><input type="text" placeholder="Waterloo" name="cityInput" value="<%=initCity%>"></td>
+                </tr>
+                <tr>
+                    <th>Post Code</th>
+                    <td><input type="text" placeholder="N2B 8X8" name="postCodeInput" value="<%=initPostCode%>"></td>
+                </tr>
+                <tr>
+                    <th>Province</th>
+                    <td>
+                        <select name="provInput" class="provInput" value="<%=initProvince%>">
+                            <option value="none" selected disabled hidden>Select a Province</option>
+                            <option value="Alberta">Alberta</option>
+                            <option value="BritishColumbia">British Columbia</option>
+                            <option value="Manitoba">Manitoba</option>
+                            <option value="NewBrunswick">New Brunswick</option>
+                            <option value="NewfoundlandLabrador">Newfoundland & Labrador</option>
+                            <option value="NorthwestTerritories">Northwest Territories</option>
+                            <option value="NovaScotia">Nova Scotia</option>
+                            <option value="Nunavut">Nunavut</option>
+                            <option value="Ontario">Ontario</option>
+                            <option value="PrinceEdwardIsland">Prince Edward Island</option>
+                            <option value="Quebec">Quebec</option>
+                            <option value="Saskatchewan">Saskatchewan</option>
+                            <option value="Yukon">Yukon</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="text" placeholder="juandelacruz@gmail.com" name="emailInput"
+                            value="<%=initEmail%>"></td>
+                </tr>
+                <tr>
+                    <th>Phone Number</th>
+                    <td><input type="text" placeholder="519-123-6789" name="phoneInput" value="<%=initPhone%>"></td>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Delivery Time</th>
+                    <td>
+                        <select name="deliveryTime" class="deliveryTime" value="<%=initDeliveryTime%>">
+                            <option value="none" selected disabled hidden>How many days?</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="fourth">
+            <input type="submit" name="submit" value="Submit">
+        </div>
+    </form>
+
+    <% if (typeof errors !=='undefined' ){ for(var error of errors){ %>
+        <h3>
+            <%= error.msg %>
+        </h3>
+        <% } } %>
+
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+/* style.js
+    Assignment 4
+
+    Revision History
+        Francis Gerald H. Garlejo, 2022.08.11: Created, 2022.08.12: Revised
+ */
+
+
+body {
+    width: 600px;
+    margin: 0px auto;
+}
+
+.first {
+    float: left;
+}
+
+.second {
+    float: right;
+}
+
+.third {
+    clear: both;
+    width: 500px;
+    padding: 20px;
+}
+
+.fourth {
+    margin-left: 170px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: 35px;
+    margin-bottom: 20px;
+}
+
+th,
+input,
+td {
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.desc1 {
+    text-align: center;
+}
+
+.desc2 {
+    text-align: center;
+}
+
+.divProd2 {
+    padding-left: 100px;
+}
+
+.divProd1 {
+
+    padding-left: 100px;
+
+}
+
+.receipt {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid red;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input:placeholder-shown {
+    font-style: italic;
+}
+
+select.provInput {
+    text-align: center;
+}
+
+select.deliveryTime {
+    text-align: center;
+}
